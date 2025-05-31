@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* Custom Matrix Animations */
+@keyframes matrix-fall {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes matrix-glow {
+  0%, 100% {
+    text-shadow: 0 0 5px #22c55e, 0 0 10px #22c55e, 0 0 15px #22c55e;
+  }
+  50% {
+    text-shadow: 0 0 10px #16a34a, 0 0 20px #16a34a, 0 0 30px #16a34a;
+  }
+}
+
+@keyframes matrix-flicker {
+  0%, 95% { 
+    opacity: 1; 
+  }
+  96%, 100% { 
+    opacity: 0.3; 
+  }
+}
+
+.matrix-fall {
+  animation: matrix-fall linear infinite;
+}
+
+.matrix-glow {
+  animation: matrix-glow 2s ease-in-out infinite;
+}
+
+.matrix-char {
+  animation: matrix-glow 2s ease-in-out infinite;
+}
+
+.matrix-char:nth-child(3n) {
+  animation: matrix-flicker 3s ease-in-out infinite;
+}
+
+.matrix-char:nth-child(5n) {
+  animation: matrix-glow 1.5s ease-in-out infinite reverse;
+}
