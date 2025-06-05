@@ -8,7 +8,7 @@ const ContactLinks: React.FC = () => {
       
       <div className="grid grid-cols-3 gap-2">
         <a 
-          href="mailto:noelblanco369@gmail.com.com" 
+          href="mailto:noelblanco369@gmail.com" 
           className="flex flex-col items-center p-2 bg-gray-800 border border-green-400 rounded hover:bg-gray-700 transition-colors group"
         >
           <Mail className="w-4 h-4 text-green-400 mb-1 group-hover:scale-110 transition-transform" />
